@@ -1,3 +1,6 @@
 .DS_Store
 TSWLatexianTemp*
 Report/*.pdf
+*.aux
+*.log
+*.synctex.gz

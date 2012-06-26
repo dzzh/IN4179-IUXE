@@ -11,11 +11,12 @@
   {\normalfont\normalsize\bfseries}}
 \makeatother
 
+\usepackage{fullpage}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{enumitem}
 \usepackage[font=small,labelfont=bf]{caption}
-\graphicspath{{./UML/}}
+\graphicspath{{./images/}}
 \pagenumbering{arabic}
 \begin{document}
 
@@ -25,7 +26,7 @@
 
 Delft University of Technology\\
 Faculty of Electrical Engineering, Mathematics and Computer Science\\[3cm]
-\large \bf{Developing a Child-Driven Online Education Environment \\ for Third-World Countries}\\[14cm]
+\huge \bf{Developing a Child-Driven \\ Online Learning Environment \\ for Third-World Countries}\\[15cm]
 \end{center}
 
 \large \noindent 
@@ -44,7 +45,7 @@ Joris Albeda, Chiel Huurdeman, Elmer Jacobs and Zmitser Zhaleznichenka\\
 
 There are many problems related to the education process in third-world countries. One of the most important ones is lack of experienced teachers and good study materials. This problem attracts the attention of many specialists in education who suggest their solutions aimed to decrease the role of a teacher and force the children to learn themselves using the achievements of the digital era.
 
-This project was inspired by "The child-driven education" TED Talk\footnote{http://www.ted.com/talks/sugata\_mitra\_the\_child\_driven\_education.html} given by a world-recognised Indian researcher Sugata Mitra who has conducted a "Hole in the Wall" project in 1999 and has proven that the little kids from developing countries are able to study themselves with the help of the computers. Since then Sugata Mitra conducted a number of experiments on selft-organised computer-assisted learning and obtained very important results. 
+This project was inspired by "The child-driven education" TED Talk\footnote{http://www.ted.com/talks/sugata\_mitra\_the\_child\_driven\_education.html} given by a world-recognised Indian researcher Sugata Mitra who has conducted a "Hole in the Wall" project in 1999 and has proven that the little kids from developing countries are able to study themselves with the help of the computers. Since then Sugata Mitra conducted a number of experiments on self-organised computer-assisted learning and obtained very important results. 
 
 %add a sentence describing the results
 
@@ -52,36 +53,95 @@ We try to develop Sugata Mitra ideas by providing a computer assistant that is a
 
 The prototype of the application that we built uses the avatar of a teacher that communicates with the students. We have decided to organise the interaction with the students via the avatar to explore the "granny effect" that was also described by Sugata MItra. This effect is the following. It is known that the best way to learn is to teach. When someone tries to explain a studied concept to anyone, he learns it better himself as he has to structure the information in his head and really understand the details of the material before sharing them with others. Thus, it does not really matters who is the listener. If a kid talks to his granny discussing the subjects he learnt at school, he remembers the study material better that if he would not discuss it with anyone. Our avatar motivates the students to discuss and share their progress thus serving as such "granny".
 
-If implemented correctly, the computer-assisted educational systems aimed at self-organised group-based learning can be extremely useful as the potential amount of children who can benefit from the introduction of such a system is very large. Despite all the improvements in the transportation, technology and communication reached during the last decades, many kids still cannot be guided by the experienced teachers during their childhood. As Sugata Mitra points out, "there are places on Earh, in every country, where, for various reasons, good schools cannot be built and good teachers cannot or do not want to go". With our learning environment we strive to apply the ideas of Sugata Mitra to provide a tool that would be beneficial for the schools lacking the experienced teaching.
+If implemented correctly, the computer-assisted educational systems aimed at self-organised group-based learning can be extremely useful as the potential amount of children who can benefit from the introduction of such a system is very large. Despite all the improvements in the transportation, technology and communication reached during the last decades, many kids still cannot be guided by the experienced teachers during their childhood. As Sugata Mitra points out, "there are places on Earth, in every country, where, for various reasons, good schools cannot be built and good teachers cannot or do not want to go". With our learning environment we strive to apply the ideas of Sugata Mitra to provide a tool that would be beneficial for the schools lacking the experienced teaching.
 
 %outline
 
-\section{Requirements analysis}
+\section{OLE Requirements}
 
 While developing the learning environment, we have specified the following set of requirements.
 
 \subsection{General requirements}
 
-\subsection{Requirement to student interface}
+\begin{enumerate}
+\item The main goal of a project is to develop an online learning environment (OLE) using a virtual assistant that will stimulate self-organised group-based learning for the children of age 9-12 years from all over the world (from later on also referred as students).
+
+\item OLE should consist of challenge database, student interface, teacher interface and a management console.
+
+\item For working with any part of OLE, a computer with internet access is required.
+\end{enumerate}
+
+\subsection{Requirements to challenge database}
+
+\begin{enumerate}
+\item The challenge database (CD) is used as a storage for the challenges that are submitted by teachers/volunteers and are used in the learning process. Challenges may contain textual data, images, musical files and short video movies.
+
+\item The challenges are intended to be designed in such a way that they motivate students in gaining more knowledge about the subject, or provide a new angle on subjects the student has some experience with.
+
+\item Apart from storing the contents of the challenges, CD should store such information as the number of times the challenge was used and all the feedbacks provided by the students. CD should allow to store translations of the challenges.
+\end{enumerate}
+
+\subsection{Requirements to student interface}
+
+\begin{enumerate}
+\item Student interface (SI) is a native application for SugarOS environment used in One Laptop Per Child project\footnote{http://laptop.org}. 
+
+\item The goal of SI is to interact with the student group by assigning them with challenges submitted by the teachers/volunteers and gathering feedback on their accomplishment. 
+
+\item SI should be intuitive enough to let users start working with it not having prior computer experience.
+
+\item SI should be able to properly display images, play musical files and show movies, if these media data is included into the contents of a challenge in CD.
+
+\item Interaction is performed via the animated avatar.
+\end{enumerate}
+
+\subsubsection{Requirements to avatar}
+
+\begin{enumerate}
+\item Avatar design should focus on creating a realistic and trustful person. Most attention should be paid to the facial expressions, as the body language doesn't affect learning process much \cite{Cowell}.
+
+\item The avatar should be adjustable to cope with different types of education-related challenges, i.e. the challenges asking a question with a concise answer need in another presentation and feedback gathering if comparing with process-oriented challenges.
+
+\item The avatar should motivate user to complete the challenge if the user loses his interest in it and motivate to look for additional information, not only answer the questions. It is important to build the motivation part that will not be very annoying.
+
+\item Interaction with the student should be organised either in textual form with pop-up windows or with text-to-speech mechanisms, or with both of them.
+\end{enumerate}
+
 
 \subsection{Requirements to teacher interface}
+
+\begin{enumerate}
+\item Teacher interface (TI) is a web application that connects to CD and allows teachers/volunteers to add new challenges, edit and translate existing challenges, analyse the feedback for the complete challenges and use the existing challenges to build the learning plans for SI.
+
+\item TI should include a guide on the creation of challenges. In the guide it should be explained what sorts of challenges are to be added to the system and several examples of the challenges of every type should be demonstrated. Generally, the challenges should be designed to encourage the students to use available online instruments and stimulate group work.
+
+\item TI should allow teachers to add not only the textual information, but also multimedia data for all the media files supported in SI.
+
+\item TI should allow teachers manage the computers of the associated students. This means, that after student laptop connects to the internet, it should automatically download the learning plan submitted by teacher for this student group and stick to this plan when students work with the OLE.
+\end{enumerate}
+
 
 \subsection{Requirements to the management panel}
 
 \begin{enumerate}
-\item The learning environment should focus on educating children in age group of 9-12 years.
-\item Most attention must be paid on self-organised group-based learning and encouragement for social interaction.
-\item The environment should consist of 
-\item Avatar design should focus on creating a realistic and trustful person. Most attention should be paid to the facial expressions, as the body language doesn't affect learning process much \cite{Cowell}.
+\item Management panel (MP) is designed as a web application allowing to manage data in CD and control SI and TI. 
 
-Due to the time limitations while working on the project we have decided to concentrate on the implementation of the student learning mechanism, not paying attention to developing the teacher interface and a management panel, as these tasks are relatively straightforward and do not contain considerable UI engineering challenges. 
+\item MP should allow to navigate through the challenges available in CD, edit and remove them with ease.
 
-
+\item MP should allow to manage teacher accounts created to work with TI.
 \end{enumerate}
 
-%how do different avatars affect the study process?
+\section{Use cases}
 
-\section{Testing setup}
+\section{Pilot project}
+
+Due to the time limitations while working on the project we have decided to concentrate on the implementation of the student learning mechanism, not paying attention to developing the teacher interface and a management panel, as these tasks are relatively straightforward and do not contain considerable UI engineering challenges.
+
+\section{Testing}
+
+\section{Challenges}
+
+%how do different avatars affect the study process?
 
 \section{Conclusions}
 

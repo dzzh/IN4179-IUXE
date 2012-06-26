@@ -1,0 +1,19 @@
+<html>
+	<script language="JavaScript" src="Constructors.js"></script>
+
+	<script language="JavaScript">
+		var test = new Challenge();
+		var testPart = new ChallengePart("Hi", "Bye");
+		var testPart2 = new ChallengePart("Hello", "See ya");
+		testPart.addHint("Boo!", 9);
+		test.addPart(testPart);
+		test.addPart(testPart2);
+
+		document.writeln(test.parts[0].text);
+		document.writeln(test.parts[0].done);
+		document.writeln(test.parts[0].hints[0].text);
+		
+		document.writeln(test.nextPart().text);
+		document.writeln(test.nextPart().text);
+	</script>
+</html>

@@ -1,0 +1,92 @@
+\documentclass[a4paper]{article}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{5}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+\makeatother
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage[font=small,labelfont=bf]{caption}
+\graphicspath{{./UML/}}
+\pagenumbering{arabic}
+\begin{document}
+
+\begin{titlepage}
+
+\begin{center}
+
+Delft University of Technology\\
+Faculty of Electrical Engineering, Mathematics and Computer Science\\[3cm]
+\large \bf{Developing a Child-Driven Online Education Environment \\ for Third-World Countries}\\[14cm]
+\end{center}
+
+\large \noindent 
+Joris Albeda, Chiel Huurdeman, Elmer Jacobs and Zmitser Zhaleznichenka\\
+\{J.Albeda, C.Huurdeman, E.Jacobs, D.V.Zhaleznichenka\}@student.tudelft.nl\\
+
+\noindent\today
+
+\end{titlepage}
+
+\setcounter{secnumdepth}{3}
+
+\abstract \emph{This is the final report for IN4179 Intelligent User Experience Engineering course that describes an online learning environment for children in third-world countries that is based on the ideas of Sugata Mitra and employs a virtual avatar of a teacher communicating with the children to facilitate the educational process. Thus we try to exploit so-called "granny effect" to let young children learn by themselves in groups using the computers connected to the Internet.}
+
+\section{Introduction}
+
+There are many problems related to the education process in third-world countries. One of the most important ones is lack of experienced teachers and good study materials. This problem attracts the attention of many specialists in education who suggest their solutions aimed to decrease the role of a teacher and force the children to learn themselves using the achievements of the digital era.
+
+This project was inspired by "The child-driven education" TED Talk\footnote{http://www.ted.com/talks/sugata\_mitra\_the\_child\_driven\_education.html} given by a world-recognised Indian researcher Sugata Mitra who has conducted a "Hole in the Wall" project in 1999 and has proven that the little kids from developing countries are able to study themselves with the help of the computers. Since then Sugata Mitra conducted a number of experiments on selft-organised computer-assisted learning and obtained very important results. 
+
+%add a sentence describing the results
+
+We try to develop Sugata Mitra ideas by providing a computer assistant that is aimed in stimulating kids to complete the study challenges submitted to the system by the experienced teachers, assign these challenges to the students and perform some evaluations on the given feedback.
+
+The prototype of the application that we built uses the avatar of a teacher that communicates with the students. We have decided to organise the interaction with the students via the avatar to explore the "granny effect" that was also described by Sugata MItra. This effect is the following. It is known that the best way to learn is to teach. When someone tries to explain a studied concept to anyone, he learns it better himself as he has to structure the information in his head and really understand the details of the material before sharing them with others. Thus, it does not really matters who is the listener. If a kid talks to his granny discussing the subjects he learnt at school, he remembers the study material better that if he would not discuss it with anyone. Our avatar motivates the students to discuss and share their progress thus serving as such "granny".
+
+If implemented correctly, the computer-assisted educational systems aimed at self-organised group-based learning can be extremely useful as the potential amount of children who can benefit from the introduction of such a system is very large. Despite all the improvements in the transportation, technology and communication reached during the last decades, many kids still cannot be guided by the experienced teachers during their childhood. As Sugata Mitra points out, "there are places on Earh, in every country, where, for various reasons, good schools cannot be built and good teachers cannot or do not want to go". With our learning environment we strive to apply the ideas of Sugata Mitra to provide a tool that would be beneficial for the schools lacking the experienced teaching.
+
+%outline
+
+\section{Requirements analysis}
+
+While developing the learning environment, we have specified the following set of requirements.
+
+\subsection{General requirements}
+
+\subsection{Requirement to student interface}
+
+\subsection{Requirements to teacher interface}
+
+\subsection{Requirements to the management panel}
+
+\begin{enumerate}
+\item The learning environment should focus on educating children in age group of 9-12 years.
+\item Most attention must be paid on self-organised group-based learning and encouragement for social interaction.
+\item The environment should consist of 
+\item Avatar design should focus on creating a realistic and trustful person. Most attention should be paid to the facial expressions, as the body language doesn't affect learning process much \cite{Cowell}.
+
+Due to the time limitations while working on the project we have decided to concentrate on the implementation of the student learning mechanism, not paying attention to developing the teacher interface and a management panel, as these tasks are relatively straightforward and do not contain considerable UI engineering challenges. 
+
+
+\end{enumerate}
+
+%how do different avatars affect the study process?
+
+\section{Testing setup}
+
+\section{Conclusions}
+
+\begin{thebibliography}{99}
+\bibitem{Cowell} Cowell.
+\end{thebibliography}
+
+\end{document}

@@ -39,19 +39,17 @@ Joris Albeda, Chiel Huurdeman, Elmer Jacobs and Zmitser Zhaleznichenka\\
 
 \setcounter{secnumdepth}{3}
 
-\abstract \emph{This is the final report for IN4179 Intelligent User Experience Engineering course that describes an online learning environment for children in third-world countries that is based on the ideas of Sugata Mitra and employs a virtual avatar of a teacher communicating with the children to facilitate the educational process. Thus we try to exploit so-called "granny effect" to let young children learn by themselves in groups using the computers connected to the Internet.}
+\abstract \emph{This is the final report for IN4179 Intelligent User Experience Engineering course that describes an online learning environment for children in third-world countries, is based on the ideas of Sugata Mitra and employs a virtual avatar of a teacher communicating with the children to facilitate the educational process. With using the teacher's avatar we try to exploit so-called "granny effect" to let young children learn by themselves in groups using the computers connected to the Internet.}
 
 \section{Introduction}
 
 There are many problems related to the education process in third-world countries. One of the most important ones is lack of experienced teachers and good study materials. This problem attracts the attention of many specialists in education who suggest their solutions aimed to decrease the role of a teacher and force the children to learn themselves using the achievements of the digital era.
 
-This project was inspired by "The child-driven education" TED Talk\footnote{http://www.ted.com/talks/sugata\_mitra\_the\_child\_driven\_education.html} given by a world-recognised Indian researcher Sugata Mitra who has conducted a "Hole in the Wall" project in 1999 and has proven that the little kids from developing countries are able to study themselves with the help of the computers. Since then Sugata Mitra conducted a number of experiments on self-organised computer-assisted learning and obtained very important results. 
-
-%add a sentence describing the results
+This project was inspired by "The child-driven education" TED Talk\footnote{http://www.ted.com/talks/sugata\_mitra\_the\_child\_driven\_education.html} given by a world-recognised Indian researcher Sugata Mitra who has conducted a "Hole in the Wall" project in 1999 and has proven that the little kids from developing countries are able to study themselves with the help of the computers. Since then Sugata Mitra conducted a number of experiments on self-organised computer-assisted learning and concluded that self-organised group-based education may result to the same level of understanding that can be reached during the educational process guided by the experienced teachers. 
 
 We try to develop Sugata Mitra ideas by providing a computer assistant that is aimed in stimulating kids to complete the study challenges submitted to the system by the experienced teachers, assign these challenges to the students and perform some evaluations on the given feedback.
 
-The prototype of the application that we built uses the avatar of a teacher that communicates with the students. We have decided to organise the interaction with the students via the avatar to explore the "granny effect" that was also described by Sugata MItra. This effect is the following. It is known that the best way to learn is to teach. When someone tries to explain a studied concept to anyone, he learns it better himself as he has to structure the information in his head and really understand the details of the material before sharing them with others. Thus, it does not really matters who is the listener. If a kid talks to his granny discussing the subjects he learnt at school, he remembers the study material better that if he would not discuss it with anyone. Our avatar motivates the students to discuss and share their progress thus serving as such "granny".
+The prototype of the application that we built uses the avatar of a teacher that communicates with its students. We have decided to organise the interaction with the students via the avatar to explore the "granny effect" that was also described by Sugata MItra. This effect is the following. It is known that the best way to learn is to teach. When someone tries to explain a studied concept to anyone, he learns it better himself as he has to structure the information in his head and really understand the details of the material before sharing them with others. Thus, it does not really matters who is the listener. If a kid talks to his granny discussing the subjects he learnt at school, he remembers the study material better that if he would not discuss it with anyone. Our avatar motivates the students to discuss and share their progress within a group thus serving as such "granny" itself and forcing the group members to switch between "granny" and "grandchild" roles.
 
 If implemented correctly, the computer-assisted educational systems aimed at self-organised group-based learning can be extremely useful as the potential amount of children who can benefit from the introduction of such a system is very large. Despite all the improvements in the transportation, technology and communication reached during the last decades, many kids still cannot be guided by the experienced teachers during their childhood. As Sugata Mitra points out, "there are places on Earth, in every country, where, for various reasons, good schools cannot be built and good teachers cannot or do not want to go". With our learning environment we strive to apply the ideas of Sugata Mitra to provide a tool that would be beneficial for the schools lacking the experienced teaching.
 
@@ -64,9 +62,9 @@ While developing the learning environment, we have specified the following set o
 \subsection{General requirements}
 
 \begin{enumerate}
-\item The main goal of a project is to develop an online learning environment (OLE) using a virtual assistant that will stimulate self-organised group-based learning for the children of age 9-12 years from all over the world (from later on also referred as students).
+\item The main goal of a project is to develop an online learning environment (OLE) using a virtual assistant that will stimulate self-organised group-based learning for the children of aged from 9 to 12 years from all over the world (from now on also referred as students).
 
-\item OLE should consist of challenge database, student interface, teacher interface and a management console.
+\item OLE should consist of challenge database, student interface, teacher interface and a management panel.
 
 \item For working with any part of OLE, a computer with internet access is required.
 \end{enumerate}
@@ -159,13 +157,76 @@ This way she can (independently) learn some basic English with very little help.
 
 \section{Pilot project}
 
-While working on the project implementation, we have decided to restrict ourselves with the pilot version of the student interface and to test in on a number of groups of Dutch children. The student interface involving a virtual assistant is the most challenging task from the UI point of view. The rest of the application is rather straightforward. With the pilot project we tried to understand whether the ideas of Sugata Mitra implemented with the help of the virtual assistant are indeed beneficial for the facilitation of group-based computer-asssisted learning.
+While working on the project implementation, we have decided to restrict ourselves with the pilot version of the student interface and to test in on a number of groups of Dutch children. The student interface involving a virtual assistant is the most challenging task from the IUXE point of view. The rest of the application is realtively simple. With the pilot project we tried to understand whether the ideas of Sugata Mitra implemented with the help of the virtual assistant are indeed beneficial for the facilitation of group-based computer-asssisted learning.
+
+The pilot version of the student interface was built as a web application using JavaScript programming language and Microsoft Agent Script Helper (MASH) API. The application was running inside its own browser frame placed at the right side of a laptop screen thus always been visible and allowing the students to work with SugarOS applications inside the virtual machine not closing the assistant.
+
+The challenges were loaded from separate JavaScript files.
+
+At Figure~\ref{fig:intended-design} you can find the design sketch of the student interface as it has to be implemented in SugarOS environment. Black top panel is the element of OS that is used for navigation. Our application should be stick to the top-right corner of screen. It consists from a screen with a 3D-avatar which also has three buttons used for interacting with the application. 
+
+Figure~\ref{fig:pilot-design} shows a design of an actual pilot application developed in JavaScript and used with the SugarOS running in the virtual machine on the left side of the screen. 
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{intended-design.png}
+\caption{Student interface design in SugarOS environment.}
+\label{fig:intended-design}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{pilot-design.png}
+\caption{Design of a web-based pilot with SugarOS in a virtual machine.}
+\label{fig:pilot-design}
+\end{center}
+\end{figure}
+
+\section{Testing setup}
+
+\subsection{Testing procedure} 
+
+Testing procedure consisted from the following steps.
+
+\begin{enumerate}
+	\item Create a set of sample activities (in advance).
+	\item Inform participants about the test.
+	\item Provide participants with a laptop with installed environment and evaluate their behaviour while working with OLE.
+	\item Perform questionnaire and interview-based evaluation.
+\end{enumerate}
+
+\subsection{Testing claims}
+
+Testing was intended to support or reject the following claims.
+
+\begin{enumerate}
+	\item The avatar motivates user to learn about certain topic and asks questions that allow the user to reflect back on his progress thus improving learning experience.
+	\item While using the OLE the user gains more knowledge about the world and understands it better. 
+	\item Working in groups may increase the learning rate as this introduces a social aspect as well.
+\end{enumerate}
+
+\subsection{Testing objectives}
+
+During the testing phase, we wanted to evaluate the approach and detect the usability problems. Main question concerning the learning approach we wanted to answer was whether the young children are in principle able to study by themselves using the computer and out virtual assistant. For detecting the problems in usability, we wanted to analyse how the participants interact with the system. We were interested whether the interaction is done in a pre-defined way and what functionality is missing.
+
+\subsection{User experience measurements}
+
+During the testing we tried to measure the following user experience aspects:
+
+\begin{itemize}
+	\item Encouragement: do students find it interesting to work with the assistant and complete the suggested challenges.
+	\item Usability: do students feel themselves comfortable while working with the system or it is counter-intuitive/complex/etc.?
+	\item Group work: do students find it more educational/fun to work in groups? 
+\end{itemize}
+
+\section{Testing results}
+
+We performed two stages of testing the application. During the first stage, we used a focus group consisting of seven TU Delft students. Three of them worked on their own, four remaining persons were split into two groups. In the second phase we worked in TU Delft Science Center with fifteen children aged from 9 to 12 years.
 
 
 
-\section{Testing}
-
-\section{Challenges}
+\section{Open questions}
 
 %how do different avatars affect the study process?
 

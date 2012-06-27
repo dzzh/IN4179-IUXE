@@ -39,17 +39,17 @@ Joris Albeda, Chiel Huurdeman, Elmer Jacobs and Zmitser Zhaleznichenka\\
 
 \setcounter{secnumdepth}{3}
 
-\abstract \emph{This is the final report for IN4179 Intelligent User Experience Engineering course that describes an online learning environment for children in third-world countries, is based on the ideas of Sugata Mitra and employs a virtual avatar of a teacher communicating with the children to facilitate the educational process. With using the teacher's avatar we try to exploit so-called "granny effect" to let young children learn by themselves in groups using the computers connected to the Internet.}
+\abstract \emph{This is the final report for IN4179 Intelligent User Experience Engineering course that describes an online learning environment for children in third-world countries, is based on the ideas of Sugata Mitra and employs an avatar of a teacher communicating with the children to facilitate the educational process. With using the teacher's avatar we try to exploit so-called "granny effect" to let young children learn by themselves in groups using the computers connected to the Internet.}
 
 \section{Introduction}
 
 There are many problems related to the education process in third-world countries. One of the most important ones is lack of experienced teachers and good study materials. This problem attracts the attention of many specialists in education who suggest their solutions aimed to decrease the role of a teacher and force the children to learn themselves using the achievements of the digital era.
 
-This project was inspired by "The child-driven education" TED Talk\footnote{http://www.ted.com/talks/sugata\_mitra\_the\_child\_driven\_education.html} given by a world-recognised Indian researcher Sugata Mitra who has conducted a "Hole in the Wall" project in 1999 and has proven that the little kids from developing countries are able to study themselves with the help of the computers. Since then Sugata Mitra conducted a number of experiments on self-organised computer-assisted learning and concluded that self-organised group-based education may result to the same level of understanding that can be reached during the educational process guided by the experienced teachers. 
+This project was inspired by "The child-driven education" TED Talk\footnote{http://www.ted.com/talks/sugata\_mitra\_the\_child\_driven\_education.html} given by a world-recognised Indian researcher Sugata Mitra who has conducted a "Hole in the Wall" project in 1999 and has proven that the little children are able to study themselves with the help of the computers. Since then Sugata Mitra conducted a number of experiments on self-organised computer-assisted learning and concluded that self-organised group-based education may result to the same level of understanding that can be reached during the educational process guided by the experienced teachers. 
 
 We try to develop Sugata Mitra ideas by providing a computer assistant that is aimed in stimulating kids to complete the study challenges submitted to the system by the experienced teachers, assign these challenges to the students and perform some evaluations on the given feedback.
 
-The prototype of the application that we built uses the avatar of a teacher that communicates with its students. We have decided to organise the interaction with the students via the avatar to explore the "granny effect" that was also described by Sugata MItra. This effect is the following. It is known that the best way to learn is to teach. When someone tries to explain a studied concept to anyone, he learns it better himself as he has to structure the information in his head and really understand the details of the material before sharing them with others. Thus, it does not really matters who is the listener. If a kid talks to his granny discussing the subjects he learnt at school, he remembers the study material better that if he would not discuss it with anyone. Our avatar motivates the students to discuss and share their progress within a group thus serving as such "granny" itself and forcing the group members to switch between "granny" and "grandchild" roles.
+The prototype of the application that we built uses the avatar of a teacher that communicates with its students. It was decided to organise the interaction with the students via the avatar to explore the "granny effect" that was also described by Sugata MItra. This effect is the following. It is known that the best way to learn is to teach. When someone tries to explain a studied concept to anyone, he learns it better himself as he has to structure the information in his head and really understand the details of the material before sharing them with others. Thus, it does not really matters who is the listener. If a kid talks to his granny discussing the subjects he learnt at school, he remembers the study material better that if he would not discuss it with anyone. Our avatar motivates the students to discuss and share their progress within a group thus serving as such "granny" itself and forcing the group members to switch between "granny" and "grandchild" roles.
 
 If implemented correctly, the computer-assisted educational systems aimed at self-organised group-based learning can be extremely useful as the potential amount of children who can benefit from the introduction of such a system is very large. Despite all the improvements in the transportation, technology and communication reached during the last decades, many kids still cannot be guided by the experienced teachers during their childhood. As Sugata Mitra points out, "there are places on Earth, in every country, where, for various reasons, good schools cannot be built and good teachers cannot or do not want to go". With our learning environment we strive to apply the ideas of Sugata Mitra to provide a tool that would be beneficial for the schools lacking the experienced teaching.
 
@@ -62,7 +62,7 @@ While developing the learning environment, we have specified the following set o
 \subsection{General requirements}
 
 \begin{enumerate}
-\item The main goal of a project is to develop an online learning environment (OLE) using a virtual assistant that will stimulate self-organised group-based learning for the children of aged from 9 to 12 years from all over the world (from now on also referred as students).
+\item The main goal of a project is to develop an online learning environment (OLE) using a virtual assistant that will stimulate self-organised group-based learning for the children of aged from 6 to 15 years from all over the world (from now on also referred as students).
 
 \item OLE should consist of challenge database, student interface, teacher interface and a management panel.
 
@@ -208,7 +208,7 @@ Testing was intended to support or reject the following claims.
 
 \subsection{Testing objectives}
 
-During the testing phase, we wanted to evaluate the approach and detect the usability problems. Main question concerning the learning approach we wanted to answer was whether the young children are in principle able to study by themselves using the computer and out virtual assistant. For detecting the problems in usability, we wanted to analyse how the participants interact with the system. We were interested whether the interaction is done in a pre-defined way and what functionality is missing.
+During the testing phase, we wanted to evaluate the approach and detect the usability problems. Main question concerning the learning approach we wanted to answer was whether the young children are in principle able to study by themselves using the computer and our virtual assistant. For detecting the problems in usability, we wanted to analyse how the participants interact with the system. We were interested whether the interaction is done in a pre-defined way and what functionality is missing.
 
 \subsection{User experience measurements}
 
@@ -222,18 +222,61 @@ During the testing we tried to measure the following user experience aspects:
 
 \section{Testing results}
 
-We performed two stages of testing the application. During the first stage, we used a focus group consisting of seven TU Delft students. Three of them worked on their own, four remaining persons were split into two groups. In the second phase we worked in TU Delft Science Center with fifteen children aged from 9 to 12 years.
+We performed two stages of testing the application. During the first stage, we used a focus group consisting of seven TU Delft students. Three of them worked on their own, four remaining persons were split into two groups. In the second phase we worked in TU Delft Science Center with fifteen children aged from 9 to 12 years either working on their own or in groups of two and three. In both stages, half of the participants worked with a setup not containing the avatar and used only textual interaction with OLE. In our setup we used the avatars of a young woman and a senior woman.
 
+The general feedback from the focus groups was rather positive but it showed that the avatar needs to be improved.
 
+The main results obtained after performing the testing are the following.
 
-\section{Open questions}
+\begin{itemize}
+	\item Those participants who used the prototype with the avatar had significantly better attitude towards the program than participants who did not have the avatar in their setup.
+	\item Almost all participants were able to answer all the questions. 
+	\item Sample challenges that were used in the testing were designed to be quite straightforward. We feel that more open questions would lead to more curiosity and exploration. 
+	\item The participants tended to associate the avatar with themselves, asking "is it me?".
+	\item Female participants were significantly ($p < 0.5$) more positive towards the young female avatar. We expect males to give a higher rating for the male avatar, allowing the participants to identify themselves with the avatar.
+	\item We noticed that for young children the parents can take on the role of “granny”.
+	\item The hints issued by the avatar were sometimes confusing, mostly because the avatar was giving them unprovoked, based on the timings. Some participants claimed that the hints were given too fast, some claimed that the avatar was too slow. Ideally the displaying of the hints should be determined by the abilities of the students.
+	\item Appearance of the new portion of a text (containing a new challenge or a hint) was often not detected.
+	\item Individuals were mostly focused on the questions themselves and tried just to find an answer and go further. While working in groups, the participants used their time also to study the additional information about the topic and generally performed better.
+	\item Girls were more inclined to explain things to each other while the boys tried to solve all the challenges as fast as possible.
+	\item When working in a group, even if one participant knew the answer the group still used the internet to check the answer.
+	\item While using avatar in a group seemed to work well, it might be needed to encourage additional communication between group members with the help of the avatar.
+	\item When working in a group, the “smartest” of the group tended to take the control. Less experienced group members should be involved more.
+	\item Some participants got sidetracked and started showing us shark pictures.
+	\item A number of interface-related remarks were issued. 
+\end{itemize}
 
-%how do different avatars affect the study process?
+We can conclude that all our claims that we wanted to verify during the testing were proven to be correct.
+
+\section{Recommendations}
+
+The research performed by our group has clearly shown that the learning environments similar to the one developed within our project are useful in organisation of self-organised group-based learning process and this direction needs to be developed further. We issue the following recommendations that can be useful to the researchers interested in continuing our work.
+
+\begin{itemize}
+	\item The functionality of Microsoft Agent assistant that we used in our pilot turned out to be insufficient for the use in real environments. It is recommended to use more advanced systems, i.e. WorldViz Vizard\footnote{http://www.worldviz.com/products/vizard/index.html}.
+	\item To facilitate the best possible interaction with the students, face-only avatars with rich facial expressions are to be used.
+	\item The quality of a text-to-speech engine is one of the keys to success.
+	\item Beta-testing on a larger focus groups has to be performed to get better feedback.  
+\end{itemize}
+
+\section{Unresolved challenges}
+
+While working on the project we faced with a number of important questions that are to be answered in further researches on the topic.
+
+\begin{itemize}
+	\item What mechanisms to use for retrieving the feedback, especially for process-oriented questions not requiring students to provide the exact answers?
+	\item How to deal with the localisation issues? As our setup is different from what Sugata Mitra uses, we apparently cannot stick to English only. There should be a way to translate activities and filter them by language.
+	\item How do such characteristics of an avatar as gender, age and pose affect the study process and the results?
+	\item Groups of what size perform better?
+\end{itemize}
 
 \section{Conclusions}
 
+During the project implementation we have built a pilot version of a learning environment that is intended to facilitate self-organised group-based learning process with the help of internet-connected computers for the unexperienced children not having any computer experience. The results that we achieved indicate that a virtual avatar can indeed become a valuable assistant for our setup and the research in the field of building the learning environments including such assistants has to be continued.
+
+
 \begin{thebibliography}{99}
-\bibitem{Cowell} Cowell.
+\bibitem{Cowell} Cowell, A.J., and Stanney, K.M. (2005). Manipulation of non-verbal interaction style and demographic embodiment to increase anthropomorphic computer character credibility. \emph{Int. J. Human-Computer Studies}, \#62,  pp. 281--306.
 \end{thebibliography}
 
 \end{document}

@@ -53,7 +53,9 @@ The prototype of the application that we built uses the avatar of a teacher that
 
 If implemented correctly, the computer-assisted educational systems aimed at self-organised group-based learning can be extremely useful as the potential amount of children who can benefit from the introduction of such a system is very large. Despite all the improvements in the transportation, technology and communication reached during the last decades, many kids still cannot be guided by the experienced teachers during their childhood. As Sugata Mitra points out, "there are places on Earth, in every country, where, for various reasons, good schools cannot be built and good teachers cannot or do not want to go". With our learning environment we strive to apply the ideas of Sugata Mitra to provide a tool that would be beneficial for the schools lacking the experienced teaching.
 
-%outline
+The rest of this paper is organised as follows. In Section 2 we discuss the requirements to the project, Section 3 contains a number of scenarios we considered during the development and Section 4 discusses the pilot project we have build. In Section 5 we describe the testing setup we used to analyse the user interaction with the system and Section 6 contains the testing results we got. Section 7 contains the recommendations for the future work, Section 8 contains not-yet-resolved challenges that are important for the scope of the project and Section 9 concludes our findings. 
+
+The report has two appendices. In Appendix A we list the questions from the questionnaire used to get user feedback. Appendix B contains results we obtained from the questionnaire.
 
 \section{OLE Requirements}
 
@@ -98,7 +100,7 @@ While developing the learning environment, we have specified the following set o
 \begin{enumerate}
 \item Avatar design should focus on creating a realistic and trustful person. Most attention should be paid to the facial expressions, as the body language doesn't affect learning process much \cite{Cowell}.
 
-\item The avatar should be adjustable to cope with different types of education-related challenges, i.e. the challenges asking a question with a concise answer need in another presentation and feedback gathering if comparing with process-oriented challenges.
+\item The avatar should be adjustable to cope with different types of education-related challenges, i.e. the challenges asking a question with a concise answer need another presentation and feedback gathering if comparing with process-oriented challenges.
 
 \item The avatar should motivate user to complete the challenge if the user loses his interest in it and motivate to look for additional information, not only answer the questions. It is important to build the motivation part that will not be very annoying.
 
@@ -159,7 +161,7 @@ This way she can (independently) learn some basic English with very little help.
 
 While working on the project implementation, we have decided to restrict ourselves with the pilot version of the student interface and to test in on a number of groups of Dutch children. The student interface involving a virtual assistant is the most challenging task from the IUXE point of view. The rest of the application is realtively simple. With the pilot project we tried to understand whether the ideas of Sugata Mitra implemented with the help of the virtual assistant are indeed beneficial for the facilitation of group-based computer-asssisted learning.
 
-The pilot version of the student interface was built as a web application using JavaScript programming language and Microsoft Agent Script Helper (MASH) API. The application was running inside its own browser frame placed at the right side of a laptop screen thus always been visible and allowing the students to work with SugarOS applications inside the virtual machine not closing the assistant.
+The pilot version of the student interface was built as a web application using JavaScript programming language and Microsoft Agent Script Helper (MASH) API. The application was running inside its own browser frame placed at the right side of a Laptop screen thus always been visible and allowing the students to work with SugarOS applications inside the virtual machine not closing the assistant.
 
 The challenges were loaded from separate JavaScript files.
 
@@ -208,7 +210,7 @@ Testing was intended to support or reject the following claims.
 
 \subsection{Testing objectives}
 
-During the testing phase, we wanted to evaluate the approach and detect the usability problems. Main question concerning the learning approach we wanted to answer was whether the young children are in principle able to study by themselves using the computer and our virtual assistant. For detecting the problems in usability, we wanted to analyse how the participants interact with the system. We were interested whether the interaction is done in a pre-defined way and what functionality is missing.
+During the testing phase, we wanted to evaluate the approach and detect the usability problems. The main question concerning the learning approach we wanted to answer was whether the young children are in principle able to study by themselves using the computer and our virtual assistant. For detecting the problems in usability, we wanted to analyse how the participants interact with the system. We were interested whether the interaction is done in a pre-defined way and what functionality is missing.
 
 \subsection{User experience measurements}
 
@@ -222,7 +224,7 @@ During the testing we tried to measure the following user experience aspects:
 
 \section{Testing results}
 
-We performed two stages of testing the application. During the first stage, we used a focus group consisting of seven TU Delft students. Three of them worked on their own, four remaining persons were split into two groups. In the second phase we worked in TU Delft Science Center with fifteen children aged from 9 to 12 years either working on their own or in groups of two and three. In both stages, half of the participants worked with a setup not containing the avatar and used only textual interaction with OLE. In our setup we used the avatars of a young woman and a senior woman.
+We performed two stages of testing the application. During the first stage, we used a focus group consisting of seven TU Delft students. Three of them worked on their own, four remaining persons were split into two groups. In the second phase we worked in TU Delft Science Center with fourteen children aged from 6 to 15 years either working on their own or in groups of two and three. During the first stage, all the participants worked with the avatar-enabled environment, and in the second stage four of the participants worked with a setup not containing the avatar and used only textual interaction with OLE. 
 
 The general feedback from the focus groups was rather positive but it showed that the avatar needs to be improved.
 
@@ -233,7 +235,7 @@ The main results obtained after performing the testing are the following.
 	\item Almost all participants were able to answer all the questions. 
 	\item Sample challenges that were used in the testing were designed to be quite straightforward. We feel that more open questions would lead to more curiosity and exploration. 
 	\item The participants tended to associate the avatar with themselves, asking "is it me?".
-	\item Female participants were significantly ($p < 0.5$) more positive towards the young female avatar. We expect males to give a higher rating for the male avatar, allowing the participants to identify themselves with the avatar.
+	\item Female participants were significantly ($p < .05$) more positive towards the avatar. We relate it with the gender of the avatar and expect males to give a higher rating for the male avatar, allowing the participants to identify themselves with the avatar.
 	\item We noticed that for young children the parents can take on the role of “granny”.
 	\item The hints issued by the avatar were sometimes confusing, mostly because the avatar was giving them unprovoked, based on the timings. Some participants claimed that the hints were given too fast, some claimed that the avatar was too slow. Ideally the displaying of the hints should be determined by the abilities of the students.
 	\item Appearance of the new portion of a text (containing a new challenge or a hint) was often not detected.
@@ -246,7 +248,7 @@ The main results obtained after performing the testing are the following.
 	\item A number of interface-related remarks were issued. 
 \end{itemize}
 
-We can conclude that all our claims that we wanted to verify during the testing were proven to be correct.
+We can conclude that the first two of our claims were validated and the last one about the groups performing better than individuals may be correct, but it does not immediately follow from the gesults we get. Maybe it will be validated if performing testing with a larger focus group.
 
 \section{Recommendations}
 
@@ -274,9 +276,67 @@ While working on the project we faced with a number of important questions that 
 
 During the project implementation we have built a pilot version of a learning environment that is intended to facilitate self-organised group-based learning process with the help of internet-connected computers for the unexperienced children not having any computer experience. The results that we achieved indicate that a virtual avatar can indeed become a valuable assistant for our setup and the research in the field of building the learning environments including such assistants has to be continued.
 
-
 \begin{thebibliography}{99}
 \bibitem{Cowell} Cowell, A.J., and Stanney, K.M. (2005). Manipulation of non-verbal interaction style and demographic embodiment to increase anthropomorphic computer character credibility. \emph{Int. J. Human-Computer Studies}, \#62,  pp. 281--306.
 \end{thebibliography}
+
+\appendix
+
+\newpage
+
+\section{Questionnaire}
+
+To evaluate the built pilot, we used a questionnaire consisting of seven questions, each accepting an answer in range 1--5 with 5 being the most positive impression, 1 being the most negative impression. The answers were done as the smileys with different expressions and we asked the participants to make a mark on the best suiting smiley.
+
+The questions were the following.
+
+\begin{enumerate}
+	\item Did you like the programme?
+	\item Did you study something new with it?
+	\item Do you want to keep learning with this programme? 
+	\item Was it easy to learn with it?
+	\item Did you like the avatar?
+	\item Was it easy to understand what is required from the avatar?
+	\item Do you think the avatar helped you?
+\end{enumerate}
+
+\section{Gathered data}
+
+The answers to the questionnaire that were gathered during the second phase of testing are presented in the table below.
+
+\begin{center}
+  \begin{tabular}{| c | c | c | c | c | c | c | c | c | c | c | c | c |}
+    \hline
+    \# & Group size & \# group & Gender & Avatar & Grade & Q1 & Q2 & Q3 & Q4 & Q5 & Q6 & Q7 \\ \hline
+    
+    1 & 1 &	-1 & F & + & 4 & 5 & 4 & 5 & 5 & 4 & 3 & 4 \\ \hline
+
+    2 & 3 &  1 & F & + & 5 & 5 & 5 & 5 & 5 & 3 & 3 & 4 \\ \hline
+
+    3 & 3 & 1 & F & + & 7 & 5 & 5 & 5 & 5 & 3 & 3 & 4 \\ \hline
+
+ 	4 & 3 & 1 & F & + & 7 & 5 & 5 & 4 & 3 & 3 & 3 & 4 \\ \hline
+
+ 	5 & 2 & 2 & M & + & 7 & 4 & 4 & 5 & 5 & 5 & 5 & 4 \\ \hline
+
+ 	6 & 2 & 2 & M & + & 8 & 5 & 4 & 5 & 4 & 5 & 4 & 3 \\ \hline
+
+ 	7 & 2 & 6 & M & - & 3 & 3 & 1 & 1 & 5 & -1 & -1 & -1 \\ \hline
+
+ 	8 & 2 & 6 & F & - & 5 & 3 & 4 & 2 & 1 & -1 & -1 & -1 \\ \hline
+
+ 	9 & 3 & 5 & M & + & 6 & 5 & 5 & 5 & 4 & 4 & 5 & 4 \\ \hline
+
+ 	10 & 3 & 5 & M & + & 6 & 4 & 4 & 3 & 5 & 4 & 5 & 3 \\ \hline
+
+ 	11 & 3 & 5 & M & + & 5 & 4 & 5 & 4 & 5 & 4 & 4 & 3 \\ \hline
+
+	12 & 2 & 3 & F & - & 10 & 4 & 3 & 4 & 3 & -1 & -1 & -1 \\ \hline
+
+ 	13 & 2 & 3 & F & - & 10 & 4 & 2 & 3 & 4 & -1 & -1 & -1 \\ \hline
+
+ 	14 & 1 & -1 & F & + & 7 & 4 & 5 & 5 & 4 & 4 & 5 & 4 \\ \hline
+  \end{tabular}
+\end{center}
 
 \end{document}
